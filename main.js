@@ -1,7 +1,9 @@
-//Webmaster 2018
-//Use $('.blah').method(); for classes and $('#blach').method(); for ids
-$(document).ready(function () {
-	$(".navBar").click(function () {
-		$(this).hide();
-	});
+$(document).ready(() => {
+	//Arrow functions does not contain a default value for the variable 'this', and are best-suited for non-method functions
+    $("p").click(function(){
+        $(this).hide();
+    });
+	
+	//Store jQuery object as const
+	const $object = $('nav');
 });

@@ -1,4 +1,8 @@
 /*Webmaster 2018*/
-.navBar {
-	color: #ff0000;
+body {
+	background-color: #99999999;
+}
+
+nav {
+	display: block;
 }
