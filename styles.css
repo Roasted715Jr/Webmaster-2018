@@ -1,7 +1,7 @@
 /*Webmaster 2018*/
 body {
-	background-color: #000000;
-	color: #FFFFFF;
+	background-color: #FFFFFF;
+	color: #000000;
 	font-family: calibri;
 	margin: 0px;
 	margin-left: 100px;
@@ -13,21 +13,25 @@ ul.topnav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.1);
 }
 
 ul.topnav li {float: left;}
 
 ul.topnav li a {
     display: block;
-    color: white;
+	color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #111;}
+ul.topnav li a:hover:not(.active) {background-color: #FFF;}
 
 ul.topnav li a.active {background-color: #4CAF50;}
 
 ul.topnav li.right {float: right;}
+
+#logo {
+	display: block;
+}

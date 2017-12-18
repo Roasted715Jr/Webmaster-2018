@@ -1,23 +1,37 @@
 $(document).ready(() => {
-	//Arrow functions does not contain a default value for the variable 'this', and are best-suited for non-method functions
+	//Arrow functions does not contain a default value for the variable 'this',
+	// and are best-suited for non-method functions
 	
-	//Store jQuery object as const
-	//const $object = $('nav');
+	const $window = $(window);
+	//alert($window.width() + " " + $window.height());
 	
-	let imgNum = Math.ceil(Math.random() * 8);
-	let src = 'img/logo0' + imgNum + '.png';
-	$('#logo').attr('src', src);
 	
-	/*
+	const $body = $('#body');
+	const $logo = $('#logo');
+	const $logoSVG = $('#logoSVG');
+	const margin = 50;
 	
-	int number;
-	string source;
-	number = random.range(1,8)
-	source = 'img/logo0' + number + '.png';
+	//$body.css();
 	
-	*/
+	//Math.random() returns a number between 0 (inclusive) and 1 (exclusive),
+	// meaning 0 is a possible number for Math.random() to return
+	const imgNum = Math.ceil(Math.random() * 8);
+	let src = ''
+	if(src === "")
+	{
+		src = 'img/logo01.svg';
+	}
 	
-    $("p").click(function(){
-        $(this).hide();
-    });
+	src = 'img/logo0' + imgNum + '.svg';
+	$logo.attr('src', src);
+	$logo.attr('width', $window.width() / 13);
+	$logo.attr('height', 'auto');
+	
+	
+	
+	
+	// const $a = $('a');
+    // $a.on('click', () =>{
+        // $a.hide();
+    // });
 });
