@@ -1,6 +1,8 @@
 /*Webmaster 2018*/
 body {
 	background-color: #FFFFFF;
+	background-size: 100%;
+	background-repeat: no-repeat;
 	color: #000000;
 	font-family: calibri;
 	margin: 0px;
@@ -8,26 +10,43 @@ body {
 	margin-right: 100px;
 }
 
-#menu {
+#menu-list {
 	list-style-type: none;
 	background-color: #000000;
-	float: left;
-	width: 110px;
-	margin: 0;
+	float: right;
+	width: 150px;
+	height: 100%;
 	position: absolute;
-	top: 0px;
-	left: -150px;
+	top: -20px;
+	right: -175px;
 	/*When the 'left' property is changed on the 'menu' class, make a 0.5 second transition
 		with a constant (or linear) speed*/
-	transition: left 0.5s linear;
+	transition: right 0.5s linear;
 }
 
-	#menu a {
-		text-decoration: none;
-		color: #FFFFFF;
-		display: block;
-	}
+#close-btn {
+	color: #FF0000;
+	font-size: 300%;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+#menu-list {
+	margin-left: 0px;
+	padding-left: 25px;
+}
+
+#menu-btn {
+	font-size: 300%;
+	margin: 0%;
+}
+
+#menu-list a {
+	text-decoration: none;
+	color: #FFFFFF;
+	display: block;
+}
 
 #logo {
-	display: block;
+	float: left;
 }

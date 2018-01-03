@@ -7,9 +7,10 @@ $(document).ready(() => {
 	const $body = $('#body');
 	const $logo = $('#logo');
 	const $logoSVG = $('#logoSVG');
-	const $menu = $('#menu');
+	const $menuBar = $('#menu-list');
+	const $menuOpen = $('#menu-btn');
+	const $menuClose = $('#close-btn');
 	let isMenuHidden = true;
-	const margin = 50;
 
 	//Initialization...
 	//Math.random() returns a number between 0 (inclusive) and 1 (exclusive),
@@ -24,18 +25,23 @@ $(document).ready(() => {
 	$logo.attr('width', $window.width() / 13);
 	$logo.attr('height', 'auto');
 
-	$logo.on('click', () => {
+	$menuBar.hide();
+
+	$menuOpen.on('click', () => {
+		ChangeMenuStatus();
+	});
+	$menuClose.on('click', () => {
 		ChangeMenuStatus();
 	});
 
 	function ChangeMenuStatus () {
-		$menu.toggleClass('inactive');
-		$menu.toggleClass('active');
 		isMenuHidden = !isMenuHidden;
 		if (isMenuHidden) {
-			$menu.css('left', '-150px');
+			$menuBar.css('right', '-325px');
+			window.setTimeout(() => { $menuBar.hide(); }, 500);
 		} else {
-			$menu.css('left', '0px');
+			$menuBar.show();
+			$menuBar.css('right', '0px');
 		}
 	}
 });
