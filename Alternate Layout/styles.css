@@ -10,43 +10,47 @@ body {
 	margin-right: 100px;
 }
 
-#menu-list {
-	list-style-type: none;
-	background-color: #000000;
-	float: right;
-	width: 150px;
-	height: 100%;
-	position: absolute;
-	top: -20px;
-	right: -175px;
-	/*When the 'left' property is changed on the 'menu' class, make a 0.5 second transition
-		with a constant (or linear) speed*/
-	transition: right 0.5s linear;
-}
-
-#close-btn {
-	color: #FF0000;
-	font-size: 300%;
-	margin-top: 10px;
-	margin-bottom: 0px;
-}
-
-#menu-list {
-	margin-left: 0px;
-	padding-left: 25px;
-}
-
 #menu-btn {
 	font-size: 300%;
 	margin: 0%;
+	float: right;
+	/* Not including this causes a bug for the button... DON'T REMOVE IT */
+	position: absolute;
+	right: 5%;
+	top: 5%;
 }
 
-#menu-list a {
-	text-decoration: none;
-	color: #FFFFFF;
+ul.top-nav {
+    list-style-type: none;
+    margin: 100px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.1);
+	display: block;
+}
+
+ul.top-nav li {float: left;}
+
+ul.top-nav li a {
+    display: block;
+	color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.top-nav li a:hover:not(.active) {background-color: #FFF7;}
+
+ul.top-nav li a.active {background-color: #4CAF50;}
+
+ul.top-nav li.right {float: right;}
+
+#main-header {
+	text-align:center;
 	display: block;
 }
 
 #logo {
 	float: left;
+	display: inline-block;
 }
