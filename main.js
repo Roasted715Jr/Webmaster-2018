@@ -9,7 +9,6 @@ $(document).ready(() => {
 	const $body = $('#body');
 	const $logo = $('#logo');
 	const $logoSVG = $('#logoSVG');
-	const margin = 50;
 	
 	//$body.css();
 	
@@ -17,8 +16,7 @@ $(document).ready(() => {
 	// meaning 0 is a possible number for Math.random() to return
 	const imgNum = Math.ceil(Math.random() * 8);
 	let src = ''
-	if(src === "")
-	{
+	if (src === '') {
 		src = 'img/logo01.svg';
 	}
 	
@@ -26,12 +24,4 @@ $(document).ready(() => {
 	$logo.attr('src', src);
 	$logo.attr('width', $window.width() / 13);
 	$logo.attr('height', 'auto');
-	
-	
-	
-	
-	// const $a = $('a');
-    // $a.on('click', () =>{
-        // $a.hide();
-    // });
 });
